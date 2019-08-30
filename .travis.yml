@@ -4,16 +4,12 @@ python:
 - 3.6
 - 3.7
 install:
-- pip install -U setuptools zc.buildout setuptools-scm tox-travis
-- buildout -n
+- pip install tox-travis
 script:
-- bin/test --cache-clear --cov-report term-missing --cov src
 - tox
 after_success: 
 cache:
   pip: true
-  directories:
-  - eggs/
 notifications:
   webhooks:
     secure: t+7Be/C8+jAZrZFYjcK6mHkYIrydKm/f8EZK4t2V+XA87ICTPl5UwSE7+7u8CaC5mLVrO02Y+I7+INIZ5XS3UMJrkHfPMhiwCi7EbW1Fk27DpNCloX9NyQoaKD29TcDxV6GTOOEJrLkB9aBJy6CRj2lQXkvlhAN+5YaoNiT5oJCXCotG7lpkrLwLOlcqXFlESuoMYJIy1u0KeztXlc7KFmKSxNa9FqGmuKZ8OWmQCeUpq66oNGoXbXgqJEtAFew7s/G8xcP6t2bOYf0vlHKtdAUd8J+6sMPiJAAwE3nlAwVDhn5hIvkr7RN3QDf9TlXpX4bfyIrGf/KnHRnmAAPLBrPMDVG5K/Dwwv+YssIKfX3iCKsnUSbgpMU3RKyPI9Tk0KhV/TqGjbD4Y8Qm4x3LAqkHxq55LcRUpFCeq6dwTY45XDxR9di1ZDHiPWb6gKrj69KYUciiCM9b/6+SdAax0VRDwa4Z+Q8FQBFk9Pwisx31TzZNqWKISrFSj1OlUDdhb/hAm1QR49Kprv5lhG2wM9lzRtdyP+xhr887YYDv+JtW8Ul/fxDGErcXbv+ip0gnVTkWT4ZuY8V67QDfhPNJkz8M3KWejDxoPE6E0+hKvCoFr8t41cYP3A+gQiAfup3UO22b1m3+NyOs6Dcoayh0ZLIqd/5LjVT16HHdUXZlDwQ=
